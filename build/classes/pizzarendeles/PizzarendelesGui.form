@@ -135,6 +135,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Margherita"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButton3">
           <Properties>
@@ -192,14 +195,18 @@
         <Component class="javax.swing.JComboBox" name="jComboBox2">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="1 db"/>
-                <StringItem index="1" value="2 db"/>
-                <StringItem index="2" value="3 db"/>
-                <StringItem index="3" value="4 db"/>
+              <StringArray count="5">
+                <StringItem index="0" value="V&#xe1;lassz"/>
+                <StringItem index="1" value="1 db"/>
+                <StringItem index="2" value="2 db"/>
+                <StringItem index="3" value="3 db"/>
+                <StringItem index="4" value="4 db"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
@@ -207,11 +214,12 @@
         <Component class="javax.swing.JComboBox" name="jComboBox1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="24 cm"/>
-                <StringItem index="1" value="32 cm"/>
-                <StringItem index="2" value="48 cm"/>
-                <StringItem index="3" value="64cm"/>
+              <StringArray count="5">
+                <StringItem index="0" value="V&#xe1;lassz"/>
+                <StringItem index="1" value="24 cm"/>
+                <StringItem index="2" value="32 cm"/>
+                <StringItem index="3" value="48 cm"/>
+                <StringItem index="4" value="64cm"/>
               </StringArray>
             </Property>
           </Properties>

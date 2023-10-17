@@ -57,6 +57,11 @@ public class PizzarendelesGui extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Margherita");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Hawai");
@@ -93,9 +98,14 @@ public class PizzarendelesGui extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Egyebek"));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 db", "2 db", "3 db", "4 db" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Válassz", "1 db", "2 db", "3 db", "4 db" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "24 cm", "32 cm", "48 cm", "64cm" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Válassz", "24 cm", "32 cm", "48 cm", "64cm" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -201,9 +211,42 @@ public class PizzarendelesGui extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Integer osszeg = 1500;
-        JOptionPane.showMessageDialog(null, "A rendelés sikeresen megtörtént! 1500FT" , "FIGYELMEZTETÉS",2);
+        boolean vanMargherita = jRadioButton1.isSelected();
+        boolean vanSonkas = jRadioButton2.isSelected();
+        boolean vanHawai = jRadioButton3.isSelected();
+        boolean vanMagyaros = jRadioButton4.isSelected();
+        boolean PizzaMennyiseg = jComboBox2.getSelectedIndex() > 0;
+        boolean meretvalasztas = jComboBox1.getSelectedIndex() > 0;
+        
+        String uzenet;
+         if(vanMargherita || vanSonkas || vanHawai || vanMagyaros){
+             if (PizzaMennyiseg) {
+                 if (meretvalasztas) {
+                    uzenet = "Pizza 1500FT";
+                    JOptionPane.showMessageDialog(null, uzenet, "INFORMÁCIÓ", 1);
+                    JOptionPane.showMessageDialog(null, "A rendelés sikeresen megtörtént!" , "VISSZAJELZÉS",2);
+                 } else {
+                    uzenet = "Nincs méret választva!";
+                    JOptionPane.showMessageDialog(null, uzenet, "FIGYELMEZTETÉS", 2);
+                 }
+             } else {
+                uzenet = "Nincs mennyiség választva!";
+                JOptionPane.showMessageDialog(null, uzenet, "FIGYELMEZTETÉS", 2);
+                 
+             }
+         } else{
+             uzenet = "Nincs pizza választva!";
+             JOptionPane.showMessageDialog(null, uzenet, "FIGYELMEZTETÉS", 2);
+         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
