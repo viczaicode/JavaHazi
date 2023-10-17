@@ -189,7 +189,7 @@ public class PizzarendelesGui extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(58, 58, 58)
                 .addComponent(jButton1)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -201,7 +201,8 @@ public class PizzarendelesGui extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "A rendelés sikeresen megtörtént.");
+        Integer osszeg = 1500;
+        JOptionPane.showMessageDialog(null, "A rendelés sikeresen megtörtént! 1500FT" , "FIGYELMEZTETÉS",2);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
